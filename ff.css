@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+
+body {
+    font-family: 'Cinzel Decorative', cursive;
+    background: url('5.png'), linear-gradient(to bottom, #FFD700, #d8b787); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #b8860b; /* Koyu sarı */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    color: #b8860b; /* Koyu sarı */
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: normal;
+    color: #c2932b; /* Daha açık koyu sarı */
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.card {
+    background-color: #FFD500;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card span {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #b8860b;
+}
+
+.card small {
+    font-size: 0.9em;
+    color: #c2932b;
+    letter-spacing: 1px;
+}
+
+.withdraw-btn {
+    background-color: #d4a759;
+    color: white;
+    padding: 12px 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.withdraw-btn:hover {
+    background-color: #b9893b;
+}
+
+.input-container {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #b8860b;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #d4a759;
+    border-radius: 8px;
+    background-color: #FFD500;
+    color: #b8860b;
+}
+
+.input-container input::placeholder {
+    color: #c2932b;
+}
+
+/* Pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #FFD500;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #b8860b;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b8860b;
+    cursor: pointer;
+}
+
+/* Overlay ve GIF */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gif-image {
+    width: 150px;
+    height: auto;
+}
+
+/* Uyarı Resmi */
+.warning-image {
+    position: fixed;
+    bottom: 40%;
+    right: 50%;
+    transform: translateX(50%);
+    width: 200px;
+    height: auto;
+    display: none;
+    z-index: 1001;
+}
+
+/* Alt Menü */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(34, 17, 0, 0.9);
+    border-top: 2px solid #FFD500;
+    z-index: 10;    
+}
+
+/* Butonlar */
+.footer button {
+    background: linear-gradient(180deg, #8B4513, #FFD500);
+    color: #b8860b;
+    font-weight: bold;
+    border: 2px solid #FFD500;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* Buton Hover */
+.footer button:hover {
+    background: #FFD500;
+    color: #8B4513;
+}
+
+/* Simge Buton */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: #000;
+    box-shadow: 0 0 8px #fff;
+}
+
+.icon-btn img {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0 0 10px #fff);
+}
+/* Gece Çölü Yıldız Efekti */
+@keyframes stars {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('hh.png'); /* Yıldız efekti */
+    opacity: 0.5;
+    z-index: -1;
+    animation: stars 50s linear infinite;
+}
